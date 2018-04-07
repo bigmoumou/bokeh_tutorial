@@ -1,6 +1,6 @@
 # How to embed bokeh plot in Django: Quick Start
 
-## 兩個步驟 :
+## It's just two steps :
 - Step1. 畫出 bokeh 的圖 (figure)
 - Step2. Decompose 成 script 和 div 後傳到前端 (透過 jinja)
 - Done !
@@ -17,7 +17,7 @@ plot = figure(title=title, plot_width=400, plot_height=400)
 plot.line(x, y, line_width=2)
 script, div = components(plot)
 ```    
-which may look like    
+Which may look like    
 
 ![](./github_imgs/example_lineplot01.png)
 
