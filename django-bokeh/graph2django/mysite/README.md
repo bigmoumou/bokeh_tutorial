@@ -26,9 +26,9 @@ show(plot)
 ```    
 
 Which may look like:    
-
+<kbd>
 ![](./github_imgs/example_lineplot01.png)
-
+</kbd>
 
 ### Step 2-1. Decompose to script and div:
 Decompose the bokeh figure by just two lines.
@@ -84,5 +84,6 @@ The full example code in `index.html` looks like this.
 #### The full django code can be found at the same folder.    
     
 Finally, the result will look like this:      
-
+<kbd>
 ![](./github_imgs/example_lineplot02.png)
+</kbd>
