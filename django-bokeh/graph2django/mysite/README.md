@@ -26,6 +26,7 @@ show(plot)
 ```    
 
 Which may look like:    
+
 <kbd>
 ![](./github_imgs/example_lineplot01.png)
 </kbd>
@@ -83,7 +84,8 @@ The full example code in `index.html` looks like this.
 #### Also, the corresponding version must be matched.    
 #### The full django code can be found at the same folder.    
     
-Finally, the result will look like this:      
+Finally, the result will look like this:    
+
 <kbd>
 ![](./github_imgs/example_lineplot02.png)
 </kbd>
