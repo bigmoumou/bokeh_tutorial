@@ -4,7 +4,7 @@ It does not include comparison with others tools.
 
 ## It's just two steps :
 - Step 1. 畫出 bokeh 的圖 (figure)
-- Step 2.
+- Step 2.    
     - Step 2-1. 將 bokeh plot decompose 成 script 和 div 
     - Step 2-2. 將 script 和 div 透過 jinja 語法傳到前端
 - Done !
