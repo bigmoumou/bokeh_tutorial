@@ -7,7 +7,7 @@
 
 ## Quick Start Example:
 ### Step1. Bokeh figure:    
-A simple lineplot example in bokeh tutorial
+A simple lineplot example in bokeh tutorial.
 
 ```python
 from bokeh.plotting import figure
@@ -21,10 +21,36 @@ plot.line(x, y, line_width=2)
 show(plot)
 ```    
 
-Which may look like    
+Which may look like:    
 
 ![](./github_imgs/example_lineplot01.png)
 
 
-### Step2. Decompose to script and div, then sent it to the frontend
+### Step2-1. Decompose to script and div:
+Decompose the bokeh figure by just two lines.
+```python
+from bokeh.embed import components
 
+script, div = components(plot)
+```
+
+### Step2-1. Sent it to the frontend:
+The full example looks like this (file: views.py).
+```python
+from django.shortcuts import render
+from bokeh.plotting import figure 
+from bokeh.embed import components
+
+def index(request):
+    x = range(10)
+    y = [2,3,5,6,2,4,2,6,5,7]
+    title = 'demo'
+
+    plot = figure(title=title, plot_width=400, plot_height=400)
+    plot.line(x, y, line_width=2)
+    script, div = components(plot)
+
+    return render(request,
+    			  'bokeh_demo/index.html',
+    			  {'script': script, 'div': div})
+```
