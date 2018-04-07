@@ -1,4 +1,5 @@
 # How to embed bokeh plot in Django: Quick Start
+This short tutorial is meant for people who want to embed Bokeh plot in Django. It does not include comparison with others tools.
 
 ## It's just two steps :
 - Step1. 畫出 bokeh 的圖 (figure)
