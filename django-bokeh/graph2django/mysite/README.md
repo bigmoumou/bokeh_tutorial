@@ -5,8 +5,8 @@ It does not include comparison with others tools.
 ## It's just two steps :
 - Step 1. 畫出 bokeh 的圖 (figure)
 - Step 2.    
-     - Step 2-1. 將 bokeh plot decompose 成 script 和 div     
-     - Step 2-2. 將 script 和 div 透過 jinja 語法傳到前端
+    - Step 2-1. 將 bokeh plot decompose 成 script 和 div     
+    - Step 2-2. 將 script 和 div 透過 jinja 語法傳到前端
 - Done !
 
 ## Quick Start Example:
@@ -39,7 +39,7 @@ script, div = components(plot)
 ```
 
 ### Step 2-2. Sent it to the frontend:
-The full example looks like this (file: views.py).
+The full example code in `views.py` looks like this.
 ```python
 from django.shortcuts import render
 from bokeh.plotting import figure 
@@ -57,4 +57,27 @@ def index(request):
     return render(request,
     			  'bokeh_demo/index.html',
     			  {'script': script, 'div': div})
-```
+```    
+The full example code in `index.html` looks like this.
+```html
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	 <meta charset="UTF-8">
+	 <title>Document</title>
+  <!--  Bokeh CSS and JS -->
+	 <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.css" rel="stylesheet" type="text/css">
+	 <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.15.min.css" rel="stylesheet" type="text/css">
+	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.js"></script>
+	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.15.min.js"></script>
+  <!-- # # # # # # # # # -->
+ </head>
+ <body>
+	 <h1>Hello World!</h1>
+	 {{ div | safe }}
+	 {{ script | safe }}
+ </body>
+</html>
+```    
+Notice that you need to add Bokeh CSS and JS in your `html file`.    
+Also, the corresponding version must be matched.
