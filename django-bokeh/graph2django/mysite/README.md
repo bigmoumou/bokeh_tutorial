@@ -6,7 +6,7 @@
 - Done !
 
 ## Quick Start Example:
-- **Step1. Bokeh figure:**    
+### Step1. Bokeh figure:    
 A simple lineplot example in bokeh tutorial
 ```python
 x = range(10)
@@ -22,5 +22,5 @@ which may look like
 ![](./github_imgs/example_lineplot01.png)
 
 
-- **Step2. Decompose to script and div, then sent it to the frontend**
+### Step2. Decompose to script and div, then sent it to the frontend
 
