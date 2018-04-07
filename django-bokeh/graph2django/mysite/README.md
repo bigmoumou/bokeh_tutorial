@@ -55,14 +55,14 @@ def index(request):
     script, div = components(plot)
 
     return render(request,
-    			  'bokeh_demo/index.html',
-    			  {'script': script, 'div': div})
+    		  'bokeh_demo/index.html',
+    	          {'script': script, 'div': div})
 ```    
 The full example code in `index.html` looks like this.
 ```html
 <!DOCTYPE html>
 <html lang="en">
- <head>
+    <head>
 	 <meta charset="UTF-8">
 	 <title>Document</title>
          <!--  Bokeh CSS and JS -->
@@ -71,12 +71,12 @@ The full example code in `index.html` looks like this.
 	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.js"></script>
 	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.15.min.js"></script>
          <!-- # # # # # # # # # -->
- </head>
- <body>
+    </head>
+    <body>
 	 <h1>Hello World!</h1>
 	 {{ div | safe }}
 	 {{ script | safe }}
- </body>
+    </body>
 </html>
 ```    
 #### Notice that you need to add Bokeh CSS and JS in your `html file`.    
