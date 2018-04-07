@@ -4,8 +4,8 @@ It does not include comparison with others tools.
 
 ## Overviews (It's just two steps):
 - Step 1. 畫出 bokeh 的圖 (figure)
-- Step 2.     
-    - Step 2-1. 將 bokeh plot decompose 成 script 和 div     
+- Step 2.       
+    - Step 2-1. 將 bokeh plot decompose 成 script 和 div     
     - Step 2-2. 將 script 和 div 透過 jinja 語法傳到前端     
 - Done !
 
@@ -65,12 +65,12 @@ The full example code in `index.html` looks like this.
  <head>
 	 <meta charset="UTF-8">
 	 <title>Document</title>
-  <!--  Bokeh CSS and JS -->
+         <!--  Bokeh CSS and JS -->
 	 <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.css" rel="stylesheet" type="text/css">
 	 <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.15.min.css" rel="stylesheet" type="text/css">
 	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.js"></script>
 	 <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.15.min.js"></script>
-  <!-- # # # # # # # # # -->
+         <!-- # # # # # # # # # -->
  </head>
  <body>
 	 <h1>Hello World!</h1>
@@ -79,5 +79,5 @@ The full example code in `index.html` looks like this.
  </body>
 </html>
 ```    
-Notice that you need to add Bokeh CSS and JS in your `html file`.    
-Also, the corresponding version must be matched.
+#### Notice that you need to add Bokeh CSS and JS in your `html file`.    
+#### Also, the corresponding version must be matched.
