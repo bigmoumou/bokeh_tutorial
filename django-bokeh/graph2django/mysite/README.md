@@ -82,5 +82,6 @@ The full example code in `index.html` looks like this.
 #### Notice that you need to add Bokeh CSS and JS in your `html file`.    
 #### Also, the corresponding version must be matched.    
 
-Finally, the result will look like this:      
+Finally, the result will look like this:    
+The full django code can be found at the same folder.     
 ![](./github_imgs/example_lineplot02.png)
