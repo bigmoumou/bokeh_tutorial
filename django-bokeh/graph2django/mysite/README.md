@@ -3,12 +3,14 @@ This short tutorial is meant for people who want to embed Bokeh plot in Django.
 It does not include comparison with others tools.
 
 ## It's just two steps :
-- Step1. 畫出 bokeh 的圖 (figure)
-- Step2. Decompose 成 script 和 div 後傳到前端 (透過 jinja)
+- Step 1. 畫出 bokeh 的圖 (figure)
+- Step 2.
+    - Step 2-1. 將 bokeh plot decompose 成 script 和 div 
+    - Step 2-2. 將 script 和 div 透過 jinja 語法傳到前端
 - Done !
 
 ## Quick Start Example:
-### Step1. Bokeh figure:    
+### Step 1. Bokeh figure:    
 A simple lineplot example in bokeh tutorial.
 
 ```python
@@ -28,7 +30,7 @@ Which may look like:
 ![](./github_imgs/example_lineplot01.png)
 
 
-### Step2-1. Decompose to script and div:
+### Step 2-1. Decompose to script and div:
 Decompose the bokeh figure by just two lines.
 ```python
 from bokeh.embed import components
@@ -36,7 +38,7 @@ from bokeh.embed import components
 script, div = components(plot)
 ```
 
-### Step2-1. Sent it to the frontend:
+### Step 2-2. Sent it to the frontend:
 The full example looks like this (file: views.py).
 ```python
 from django.shortcuts import render
