@@ -6,7 +6,7 @@
 - Done !
 
 ## Quick Start Example:
-- **Step1. Bokeh figure:**
+- **Step1. Bokeh figure:**    
 A simple lineplot example in bokeh tutorial
 ```python
 x = range(10)
@@ -16,8 +16,9 @@ title = 'demo'
 plot = figure(title=title, plot_width=400, plot_height=400)
 plot.line(x, y, line_width=2)
 script, div = components(plot)
-```
-which may look like
+```    
+which may look like    
+
 ![](./github_imgs/example_lineplot01.png)
 
 
