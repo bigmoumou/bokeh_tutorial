@@ -8,15 +8,19 @@
 ## Quick Start Example:
 ### Step1. Bokeh figure:    
 A simple lineplot example in bokeh tutorial
+
 ```python
+from bokeh.plotting import figure
+
 x = range(10)
 y = [2,3,5,6,2,4,2,6,5,7]
 title = 'demo'
 
 plot = figure(title=title, plot_width=400, plot_height=400)
 plot.line(x, y, line_width=2)
-script, div = components(plot)
+show(plot)
 ```    
+
 Which may look like    
 
 ![](./github_imgs/example_lineplot01.png)
