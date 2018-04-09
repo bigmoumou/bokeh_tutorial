@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from bokeh.plotting import figure 
+from bokeh.plotting import figure
 from bokeh.embed import components
 # Create your views here.
 
@@ -10,7 +10,7 @@ def index(request):
     y = [2,3,5,6,2,4,2,6,5,7]
     title = 'demo'
 
-    plot = figure(title=title, plot_width=400, plot_height=400)
+    plot = figure(title=title, sizing_mode='stretch_both')
     plot.line(x, y, line_width=2)
     script, div = components(plot)
 
