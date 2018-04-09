@@ -1,8 +1,8 @@
 # How to embed bokeh plot in Django: Quick Start
-This short tutorial is meant for people who want to embed Bokeh plot in Django.     
-It does not include comparison with others tools.
+This short tutorial is meant for people who want to embed Bokeh plot into Django.     
+It does not include the comparison with others tools.
 
-## Overviews (It's just two steps):
+## Overviews (just two steps):
 - Step 1. 畫出 bokeh 的圖 (figure)
 - Step 2.       
     - Step 2-1. 將 bokeh plot decompose 成 script 和 div     
@@ -26,9 +26,9 @@ show(plot)
 ```    
 
 Which may look like:    
-
+<kbd>
 ![](./github_imgs/example_lineplot01.png)
-
+</kbd>
 
 ### Step 2-1. Decompose to script and div:
 Decompose the bokeh figure by just two lines.
@@ -80,4 +80,10 @@ The full example code in `index.html` looks like this.
 </html>
 ```    
 #### Notice that you need to add Bokeh CSS and JS in your `html file`.    
-#### Also, the corresponding version must be matched.
+#### Also, the corresponding version must be matched.    
+#### The full django code can be found at the same folder.    
+    
+Finally, the result will look like this:    
+<kbd>
+![](./github_imgs/example_lineplot02.png)
+</kbd>
