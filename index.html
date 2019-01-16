@@ -12,6 +12,7 @@
 
 	<script>
 $(function(){
+  var url = "https://script.google.com/macros/s/AKfycbxu9lBNZTrH3p8HAWtlXPA85HX2ev4b0PBRJSU3OaTfBRCglKk/exec?offset="+offset+"&baseDate="+baseDate+"&callback=?";
   var $show = $('#show');
   var a = {
       row: 3,
@@ -19,8 +20,8 @@ $(function(){
       endRow : 1,
       endCol : 1
   };
-  $.get('https://script.google.com/macros/s/AKfycbxu9lBNZTrH3p8HAWtlXPA85HX2ev4b0PBRJSU3OaTfBRCglKk/exec', a, function(data){
-    var d = data.split(',');  //把傳出來的字串分割成陣列
+  $.get(url, a, function(data){
+    var d = data.split(',');
     var arr = [];  
     for(var i=0; i<(a.endRow-a.row+1); i++){
       arr[i] = d.splice(0, (a.endCol-a.col+1)); 
